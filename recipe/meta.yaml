@@ -16,7 +16,9 @@ build:
   entry_points:
     - fivetran = fivetran_connector_sdk:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  skip: True  # [py<39]
+  # py 3.13 not supported due to pipreq dependency
+  # https://inspector.pypi.io/project/pipreqs/0.5.0/packages/12/4c/0a335b1b70c7e1821140ac6f884b51d47f049bcb600fa19bb374922f73aa/pipreqs-0.5.0.tar.gz/pipreqs-0.5.0/pyproject.toml#line.28
+  skip: True  # [py<39 or py>312]
 
 requirements:
   build:
