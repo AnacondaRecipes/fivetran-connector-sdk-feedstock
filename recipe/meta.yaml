@@ -22,8 +22,8 @@ build:
 
 requirements:
   build:
-    - patch # [not win]
-    - m2-patch # [win]
+    - patch  # [not win]
+    - m2-patch  # [win]
   host:
     - python
     - setuptools >=61.0
